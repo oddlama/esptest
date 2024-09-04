@@ -1,0 +1,18 @@
+[env]
+DEFMT_LOG="info"
+
+[build]
+target = "riscv32imac-unknown-none-elf"
+rustflags = [
+  "-C", "link-arg=-Tdefmt.x",
+  "-C", "link-arg=-Tlinkall.x",
+  # NOTE: This is required to obtain backtraces, however it may negatively
+  #       impact the performance of your application.
+  "-C", "force-frame-pointers",
+]
+
+[target.riscv32imac-unknown-none-elf]
+runner = "probe-rs run --chip=esp32c6"
+
+[unstable]
+build-std = ["core"]
