@@ -46,6 +46,7 @@
               pkgs.cargo-edit
               pkgs.probe-rs
               pkgs.rust-analyzer
+              pkgs.espflash
             ];
           shellHook = ''
             ${old.shellHook or ""}
