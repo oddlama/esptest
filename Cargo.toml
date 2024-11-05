@@ -22,6 +22,8 @@ ssd1306 = "0.9.0"
 static_cell = "2.1.0"
 embedded-devices = { version = "0.9.7", path = "../embedded-devices/embedded-devices" }
 uom = { version = "0.36.0", default-features = false, features = ["autoconvert", "u8", "u16", "u32", "u64", "i8", "i16", "i32", "i64", "f32", "f64", "rational32", "rational64", "si"] }
+ringbuffer = { version = "0.15.0", default-features = false }
+nb = "1.1.0"
 
 [profile.release]
 debug         = true  # Debug info is useful, and does not affect the size of the final binary
